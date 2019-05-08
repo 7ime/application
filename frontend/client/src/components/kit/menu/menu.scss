@@ -1,0 +1,16 @@
+@import '../../../styles/variables.scss';
+
+.menu-component {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid $grey_light_easy;
+
+    .menu-link {
+        color: $blue;
+        padding: 1rem 2rem 1rem 0;
+        text-decoration: none;
+
+        &.active {
+            color: $blue_dark;
+        }
+    }
+}
