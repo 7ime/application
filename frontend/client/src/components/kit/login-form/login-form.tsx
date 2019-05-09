@@ -5,8 +5,36 @@ import { Form, FormField, FormFlash, FormSubmit } from '../form';
 
 class LoginForm extends React.Component {
     render() {
+        const fields = {
+            email: {
+                rules: [
+                    {
+                        type: 'required',
+                        prompt: 'Введите email'
+                    },
+                    {
+                        type: 'email',
+                        prompt: 'Введите корректный email'
+                    }
+                ]
+            },
+            password: {
+                rules: [
+                    {
+                        type: 'required',
+                        prompt: 'Введите пароль'
+                    },
+                    {
+                        type: 'minLength[6]',
+                        prompt: 'Пароль должен быть не менее 6 символов'
+                    }
+                ]
+            }
+        }
+        
         return(
-            <Form>
+            <Form
+                fields={fields}>
                 {() => {
                     return(
                         <React.Fragment>

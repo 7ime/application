@@ -4,9 +4,19 @@ import { FormProvider } from '../../../context/form-context';
 import FormModel from '../form-model';
 import FormViewModel from '../form-view-model';
 
-export interface IProps  { 
+interface IProps  { 
     onSuccess?: Function,
-    children: () => React.ReactNode;
+    fields: {
+        [key: string]: {
+            value?: string | number,
+            gist?: string,
+            rules?: {
+                type: string,
+                prompt: string
+            }[]
+        }
+    },
+    children: () => React.ReactNode
  }
 
 export default class Form extends React.Component<IProps, {}> {
