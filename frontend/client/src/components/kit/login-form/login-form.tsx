@@ -8,30 +8,18 @@ class LoginForm extends React.Component {
         const fields = {
             email: {
                 rules: [
-                    {
-                        type: 'required',
-                        prompt: 'Введите email'
-                    },
-                    {
-                        type: 'email',
-                        prompt: 'Введите корректный email'
-                    }
+                    { type: 'required', prompt: 'Введите email' },
+                    { type: 'email', prompt: 'Введите корректный email' }
                 ]
             },
             password: {
                 rules: [
-                    {
-                        type: 'required',
-                        prompt: 'Введите пароль'
-                    },
-                    {
-                        type: 'minLength[6]',
-                        prompt: 'Пароль должен быть не менее 6 символов'
-                    }
+                    { type: 'required', prompt: 'Введите пароль' },
+                    { type: 'minLength[6]', prompt: 'Пароль должен быть не менее 6 символов' }
                 ]
             }
         }
-        
+
         return(
             <Form
                 fields={fields}>
@@ -39,7 +27,10 @@ class LoginForm extends React.Component {
                     return(
                         <React.Fragment>
                             <h1>Hello World</h1>
-                            <FormField>
+                            <FormField name="email">
+                                <Input />
+                            </FormField>
+                            <FormField name="password">
                                 <div>123</div>
                             </FormField>
                         </React.Fragment>

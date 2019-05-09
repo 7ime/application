@@ -2,8 +2,8 @@ import React from 'react';
 
 import { FormConsumer } from '../../context/form-context';
 
-const withForm = (Wrapped: any) => {
-    return (props: any) => {
+const withForm = <T extends {}>(Wrapped: any) => {
+    return (props: T) => {
         return(
             <FormConsumer>
                 {

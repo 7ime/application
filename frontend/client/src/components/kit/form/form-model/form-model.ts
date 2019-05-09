@@ -1,5 +1,7 @@
 class FormModel {
-    private test: number = 25;
+    getField(name: string) {
+        return 'hello world';
+    }
 }
 
 export default FormModel;
