@@ -14,16 +14,16 @@ interface IFields {
 class FormModel {
     private fields: IFields = {};
 
-    private getField(name: string) {
-        return this.fields.name;
-    }
-
     private addField(field: any) {
         this.fields[field.name] = field;
     }
 
     private getFields() {
         return this.fields;
+    }
+
+    private getField(name: string) {
+        return this.fields.name;
     }
 }
 

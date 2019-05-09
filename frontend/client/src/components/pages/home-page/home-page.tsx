@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LoginForm from '../../kit/login-form';
+import LoginForm from '../../parts/login-form';
 
 import './home-page.scss';
 

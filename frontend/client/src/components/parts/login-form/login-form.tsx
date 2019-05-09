@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Input } from '../fields';
-import { Form, FormField, FormFlash, FormSubmit } from '../form';
+import { Input } from '../../ui';
+import { Form, FormField, FormFlash, FormSubmit } from '../../kit/form';
 
 class LoginForm extends React.Component {
     render() {

@@ -4,7 +4,7 @@ import { FormProvider } from '../../../context/form-context';
 import FormViewModel from '../form-view-model';
 
 interface IProps  { 
-    onSuccess?: Function,
+    onSend?: Function,
     fields: {
         [key: string]: {
             value?: string | number,
