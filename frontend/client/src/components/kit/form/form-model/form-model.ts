@@ -1,6 +1,29 @@
+interface IFields {
+    [key: string]: {
+        name: string,
+        value: string | number,
+        gist: string,
+        rules?: {
+            type: string,
+            prompt: string
+        }[],
+        isValid: boolean
+    }
+}
+
 class FormModel {
-    getField(name: string) {
-        return 'hello world';
+    private fields: IFields = {};
+
+    private getField(name: string) {
+        return this.fields.name;
+    }
+
+    private addField(field: any) {
+        this.fields[field.name] = field;
+    }
+
+    private getFields() {
+        return this.fields;
     }
 }
 

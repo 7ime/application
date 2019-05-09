@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { FormProvider } from '../../../context/form-context';
-import FormModel from '../form-model';
 import FormViewModel from '../form-view-model';
 
 interface IProps  { 
@@ -20,7 +19,7 @@ interface IProps  {
  }
 
 export default class Form extends React.Component<IProps, {}> {
-    private formViewModel: any = new FormViewModel(new FormModel());
+    private formViewModel: any = new FormViewModel(this.props.fields);
 
     render() {
         const provaiderValue: any = {
